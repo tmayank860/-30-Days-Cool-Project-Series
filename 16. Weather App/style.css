@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #A2BCFE;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search {
+  position: relative;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.search .input {
+  background-color: #fff;
+  border: 0;
+  border-radius: 20px;
+  font-size: 18px;
+  padding: 15px;
+  height: 50px;
+  max-width: 600px;
+}
+
+.btn {
+  background: #fff;
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transform: translateX(205px);
+}
+
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+
+.card {
+  height: 360px;
+  width: 300px;
+  margin-top: 50px;
+  background-color: #8AA8FD;
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  color: #fcfcfc;
+}
+h4 {
+  letter-spacing: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  margin: 25px 0 10px 0;
+}
+h6 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 5px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.card img {
+  width: 22%;
+  margin-left: 39%;
+}
+h1 {
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 300;
+}
+.container {
+  width: 70%;
+  margin-left: 15%;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 30px;
+}
+.details {
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.details span {
+  color: #c4d3df;
+}
+.details:first-child {
+  border-right: 2px solid #fcfcfc;
+}
