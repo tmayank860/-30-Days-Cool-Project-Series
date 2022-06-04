@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  background: #9cadbc;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-button {
+  position: relative;
+  width: 220px;
+  padding: 10px;
+  height: 60px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #4c3575;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.cart-button:hover {
+  background-color: #371b58;
+}
+
+.cart-button:active {
+  transform: scale(0.8);
+}
+
+.cart-button .bi-cart-fill {
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  z-index: 2;
+  font-size: 2em;
+  transform: translate(-50%, -50%);
+}
+.cart-button .bi-bag-fill {
+  position: absolute;
+  top: -20%;
+  left: 52%;
+  z-index: 3;
+  font-size: 1.2em;
+  transform: translate(-50%, -50%);
+}
+
+.cart-button span {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  font-size: 1em;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.cart-button span.add-to-cart {
+  opacity: 1;
+}
+
+.cart-button span.added {
+  opacity: 0;
+}
+.cart-button.clicked span.add-to-cart {
+  animation: add-text 1.5s ease-in-out forwards;
+}
+
+.cart-button.clicked span.added {
+  animation: added-text 1.5s ease-in-out forwards;
+}
+
+.cart-button.clicked .bi-cart-fill {
+  animation: cart 1.5s ease-in-out forwards;
+}
+.cart-button.clicked .bi-bag-fill {
+  animation: box 1.5s ease-in-out forwards;
+}
+@keyframes cart {
+  0% {
+    left: -10%;
+  }
+  40%,
+  60% {
+    left: 50%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+@keyframes box {
+  0%,
+  40% {
+    top: -20%;
+  }
+  60% {
+    top: 40%;
+    left: 52%;
+  }
+  100% {
+    top: 40%;
+    left: 112%;
+  }
+}
+
+@keyframes add-text {
+  0% {
+    opacity: 1;
+  }
+
+  20%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes added-text {
+  0%,
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
